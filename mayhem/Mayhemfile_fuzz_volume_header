@@ -1,0 +1,8 @@
+project: savantenvs/VeraCrypt
+target: fuzz_volume_header
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_volume_header/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_volume_header
+    libfuzzer: true

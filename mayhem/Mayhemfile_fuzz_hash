@@ -1,0 +1,8 @@
+project: savantenvs/VeraCrypt
+target: fuzz_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_hash/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_hash
+    libfuzzer: true
