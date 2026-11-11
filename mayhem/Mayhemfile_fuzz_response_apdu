@@ -1,0 +1,8 @@
+project: savantenvs/VeraCrypt
+target: fuzz_response_apdu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_response_apdu/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_response_apdu
+    libfuzzer: true
